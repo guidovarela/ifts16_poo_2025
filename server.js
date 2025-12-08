@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import translationRoutes from "./routes/translationRoutes.js";
+import translationRoutes from "./routes/translate.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
