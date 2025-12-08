@@ -1,2 +1,13 @@
-# ifts16_poo_2025
-Proyecto de cursada para la materia "Programacion Orientada a Objetos" de la Tec. Sup en Desarrollo de Software. IFTS nro 16, CABA. 2025
+
+# Traductor IA con Xenova Transformers
+
+Proyecto universitario usando Node.js, Express y Xenova Transformers con el modelo `nllb-200-distilled-600M`.
+
+## Instalación
+
+```
+npm install
+node server.js
+```
+
+Abrir navegador en: http://localhost:3000

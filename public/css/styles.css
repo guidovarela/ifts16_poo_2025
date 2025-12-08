@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');  
+
+*{
+    box-sizing:border-box;
+    margin:0; padding:0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 18px;
+}
+body{
+    background: rgb(190, 190, 190);
+}
+
+textarea { height:8em; resize: none; }
+button { cursor:pointer; }
+#output { background:#eee; border-radius:5px; }
+
+.result-container{
+    position: relative;
+
+}
+#copyBtn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    }
+    #copyBtn button{
+        background: none;
+        border: none;
+        }
+
+
+/* Documentacion */
+    /* -------------------------------
+       ESTILOS AISLADOS POR CLASES
+    --------------------------------*/
+
+    .doc-container {
+      margin: auto;
+      padding: 30px;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .doc-nav {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .doc-title {
+      color: #1a73e8;
+      margin-bottom: 10px;
+    }
+
+    .doc-section-title {
+      color: #1a73e8;
+      margin-top: 35px;
+      margin-bottom: 10px;
+    }
+
+    .doc-codebox {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .doc-footer {
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .doc-link {
+      color: #1a73e8;
+      font-weight: bold;
+      text-decoration: none;
+    }
