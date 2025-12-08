@@ -9,7 +9,9 @@ document.getElementById("btn").onclick = async () => {
   status.innerHTML = '⏳ Traduciendo... <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>';
   output.innerText = "";
 
-  const res = await fetch("/api/translate", {
+
+  // const res = await fetch("/api/translate", {
+  const res = await fetch("https://ifts16-poo-2025.onrender.com/api/translate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text, sourceLang: source, targetLang: target })

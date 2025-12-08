@@ -8,4 +8,5 @@ app.use(express.json());
 app.use('/api/translate', translateRouter);
 app.use(express.static(path.resolve('public')));
 
-app.listen(3000, ()=> console.log("Servidor en http://localhost:3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(3000, ()=> console.log("Servidor en puerto ${PORT}"));
