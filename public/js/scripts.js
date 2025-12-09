@@ -1,3 +1,5 @@
+import { setupCopyButton } from "./copyBtn-module.js";
+
 document.getElementById("btn").onclick = async () => {
   const text = document.getElementById("text").value;
   const source = document.getElementById("source").value;
@@ -10,8 +12,8 @@ document.getElementById("btn").onclick = async () => {
   output.innerText = "";
 
 
-  // const res = await fetch("/api/translate", {
-  const res = await fetch("https://ifts16-poo-2025.onrender.com/api/translate", {
+  const res = await fetch("/api/translate", {
+  // const res = await fetch("https://ifts16-poo-2025.onrender.com/api/translate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text, sourceLang: source, targetLang: target })
@@ -25,14 +27,30 @@ document.getElementById("btn").onclick = async () => {
   if (data.translation) { copyBtn.style.display = "inline-block";}
 };
 
-// Evento del botón de copiar
-document.getElementById("copyBtn").addEventListener("click", async () => {
-  const text = document.getElementById("output").innerText;
+//Evento del botón de copiar
+setupCopyButton("copyBtn", "copyBtn-2", () => {
+  alert("Texto copiado al portapapeles");
+});
 
-  try {
-    await navigator.clipboard.writeText(text);
-    alert("Texto copiado al portapapeles");
-  } catch (err) {
-    alert("No se pudo copiar el texto");
-  }
+// document.getElementById("copyBtn").addEventListener("click", async () => {
+//   const text = document.getElementById("output").innerText;
+
+//   try {
+//     await navigator.clipboard.writeText(text);
+//     alert("Texto copiado al portapapeles");
+//   } catch (err) {
+//     alert("No se pudo copiar el texto");
+//   }
+// });
+
+
+// Text generator
+import { getDummyText } from './textGenerator.js';
+
+// Evento del botón para generar texto
+document.getElementById("generate-text-btn").addEventListener("click", () => {
+  const type = document.getElementById("dummy-select").value;
+  const textarea = document.getElementById("textGenerated");
+
+  textarea.innerHTML += getDummyText(type);
 });

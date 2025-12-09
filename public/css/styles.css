@@ -4,11 +4,12 @@
     box-sizing:border-box;
     margin:0; padding:0;
     font-family: 'League Spartan', sans-serif;
-    font-size: 18px;
-}
+  }
 body{
     background: rgb(190, 190, 190);
+    font-size: 18px;
 }
+
 
 textarea { height:8em; resize: none; }
 button { cursor:pointer; }
