@@ -54,3 +54,8 @@ document.getElementById("generate-text-btn").addEventListener("click", () => {
 
   textarea.innerHTML += getDummyText(type);
 });
+
+document.getElementById("clear-text-btn").addEventListener("click", () => {
+  const textareaFull = document.getElementById("textGenerated");
+  textareaFull.innerHTML="";
+})
